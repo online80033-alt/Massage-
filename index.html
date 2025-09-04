@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Massage Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: #e75480;
+      color: white;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 16px;
+    }
+    section {
+      padding: 20px;
+    }
+    .pricing {
+      margin: 20px 0;
+      font-size: 18px;
+    }
+    .pricing p {
+      margin: 8px 0;
+    }
+    .btn {
+      display: inline-block;
+      margin: 15px;
+      padding: 12px 25px;
+      font-size: 18px;
+      color: white;
+      background: #e75480;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #d63b6c;
+    }
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      text-align: left;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    form label {
+      font-weight: bold;
+      display: block;
+      margin: 10px 0 5px;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      width: 100%;
+      padding: 12px;
+      background: #e75480;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #d63b6c;
+    }
+    .floating-telegram {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0088cc;
+      border-radius: 50%;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .floating-telegram img {
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>💆‍♀️ Need a Break from Everyday Stress? 💆‍♂️</h1>
+    <p>✨ Relax, Recharge, and Rejuvenate with Our 24x7 Spa & Massage Services! ✨</p>
+  </header>
+
+  <section>
+    <p>🌿 It’s time to pamper yourself and melt away the stress with soothing therapies designed just for you! 🌺</p>
+
+    <div class="pricing">
+      <p>🕒 1 Hour: ₹2000</p>
+      <p>🕑 2 Hours: ₹3000</p>
+      <p>🕒 3 Hours: ₹4000</p>
+      <p>🌞 Day Package: ₹5500</p>
+      <p>🌙 Night Stay: ₹6000</p>
+      <p>💖 All Types of Services Available</p>
+      <p>✅ Open 24 Hours – Because Relaxation Has No Time Limit!</p>
+    </div>
+
+    <form id="bookingForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="city">Your City:</label>
+      <input type="text" id="city" name="city" required>
+
+      <label for="service">Choose Service:</label>
+      <select id="service" name="service" required>
+        <option value="1 Hour">1 Hour - ₹2000</option>
+        <option value="2 Hours">2 Hours - ₹3000</option>
+        <option value="3 Hours">3 Hours - ₹4000</option>
+        <option value="Day Package">Day Package - ₹5500</option>
+        <option value="Night Stay">Night Stay - ₹6000</option>
+      </select>
+
+      <label for="time">Preferred Timing:</label>
+      <select id="time" name="time" required>
+        <option value="Morning (AM)">Morning (AM)</option>
+        <option value="Afternoon (PM)">Afternoon (PM)</option>
+        <option value="Evening (PM)">Evening (PM)</option>
+      </select>
+
+      <button type="submit">Book Now on Telegram</button>
+    </form>
+  </section>
+
+  <a href="https://t.me/vip_simrann" class="floating-telegram" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+  </a>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const city = document.getElementById("city").value;
+      const service = document.getElementById("service").value;
+      const time = document.getElementById("time").value;
+
+      const message = `Hello, my name is ${name} from ${city}. I want to book the service: ${service} at ${time}.`;
+      window.open(`https://t.me/vip_simrann?text=${encodeURIComponent(message)}`, "_blank");
+    });
+  </script>
+
+</body>
+</html>
